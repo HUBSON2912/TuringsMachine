@@ -13,8 +13,15 @@ Możliwe instrukcje:
 * `> ILOŚĆ`             -   przesuń się o ILOŚĆ pól w prawo
 * `< ILOŚĆ`             -   przesuń się o ILOŚĆ pól w lewo
 
+Przykładowe instrukcje:
+* `, d 13` - dodaj 13 w systemie dziesiętnym
+* `, h 1a` - dodaj 1a w systemie szesnastkowym (26 w dziesiętnym)
+* `> 5` - przesuń tasmę w prawo o 5 pól
+* `. b` - wyświetl liczbę, nad którą znajduje się głowica, w systemie binarnym
+
 System ***MUSI*** być jedną literą:
 * b - system binarny
 * o - system oktalny
 * d - system decymalny
 * h - system heksadecymalny
+* x - system podany podczas wczytywania liczby
