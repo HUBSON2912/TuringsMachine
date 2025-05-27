@@ -12,7 +12,7 @@ def daj_liczbe_haksadecymalnie(liczbaDec):
 
 class Maszyna:
 
-    # metody "prywatne"    
+    # metody "prywatne"
     def __zmien_system_litera_na_system_liczba(self, litera):
         match litera:
             case 'b':
@@ -61,7 +61,11 @@ class Maszyna:
 
     def wczytajLiczbe(self, system_litera, liczba_w_tym_systemie):
         system=self.__zmien_system_litera_na_system_liczba(system_litera)
-        liczba=int(liczba_w_tym_systemie, system)
+        if system==-1:  # jeśli śmieszek podał x do wczytania to dodaj NIC
+            system=None
+            liczba=None
+        else:
+            liczba=int(liczba_w_tym_systemie, system)
         self.tasma[self.pozycja]= {"wartosc": liczba, "system": system}  # nadpisanie
 
     def wyswietlLiczbe(self, system):  # system to system NA KTÓRY MA ZOSTAĆ zamieniona liczba
@@ -91,6 +95,7 @@ class Maszyna:
     def wykonaj(self):
         wejscie=open(self.plik_instrukcje, "r")
         for linia in wejscie:
+            # pomiń nieznane instrukcje
             if linia[0] == '<' or linia[0] == '>':
                 znak, ilosc = linia.split()
                 self.przesun(linia[0], int(ilosc))
