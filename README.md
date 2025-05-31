@@ -12,12 +12,11 @@ Możliwe instrukcje:
 * `< ILOŚĆ`             -   przesuń się o ILOŚĆ pól w lewo
 * `!`                   -   wybierz pierwszy składnik sumy
 * `@`                   -   wybierz drugi składnik sumy
-* `#`                   -   wybierz pozycję w której ma być zapisana suma
+* `#`                   -   wybierz pozycję, w której ma być zapisana suma
 * `+`                   -   dodaj wybrane liczby i zapisz ją w wybranej pozycji. Jeśli nie wybrano wcześniej pozycji z użyciem instrukcji `!`, `@`, `#` wyświetla błąd.
 
 Przykładowe instrukcje:
 * `, d 13` - dodaj 13 w systemie dziesiętnym
-* `, h 1a` - dodaj 1a w systemie szesnastkowym (26 w dziesiętnym)
 * `> 5` - przesuń tasmę w prawo o 5 pól
 * `. b` - wyświetl liczbę, nad którą znajduje się głowica, w systemie binarnym
 * `+` - dodaj liczby
